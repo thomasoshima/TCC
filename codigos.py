@@ -329,7 +329,7 @@ def onset(dados, parametros):
             ons, offs, Ts
         )  # quarto threshold, elimina sequencias de 1's que possuam menos de {quantidade} de 1's seguidos
 
-        ons, offs = fifth_threshold(dado, ons, offs, Nnt)  # faz umas magicas ai
+        ons, offs = fifth_threshold(dado, ons, offs, Nnt)  # quinto threshold, remove sequencias de onset fora do padrão (ativações muito fracas ou fortes)
 
         ons, offs = third_threshold(ons, offs, Tj)
         onsets.append(ons)
